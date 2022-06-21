@@ -4,8 +4,9 @@ const article_schema = new Schema({
     id: Schema.Types.ObjectId, 
     name: String,      
     description: String,
-    price: Array,
+    price: Number,
     category: String,
+    type: String,
     versionKey: false,
 });
 
