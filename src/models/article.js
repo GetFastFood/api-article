@@ -2,7 +2,8 @@ const mongoose = require('../database/index'), Schema = mongoose.Schema;
 
 const article_schema = new Schema({
     id: Schema.Types.ObjectId, 
-    name: String,      
+    name: String,
+    image: Array,   
     description: String,
     price: Number,
     category: String,
