@@ -13,7 +13,7 @@ router.get('/:id', function(req, res) {
 });
 
 // GET /api/v1/article/restaurant/:id
-router.get("restaurant/:id", function(req, res) {
+router.get("/restaurant/:id", function(req, res) {
     articleController.getByRestaurantId(req, res);
 });
 
