@@ -22,6 +22,15 @@ let articleController = {
         }
     },
 
+    async getByRestaurantId (req, res) {
+        try {
+            let restoArticle = await article.find({restaurantId: req.params.id});
+            send.sendData(res, restoArticle);
+        }catch (error) {
+            send.sendError(res, 500, error);
+        }
+    },
+
     async create (req, res) {
         try {
             let restoArticle = await article.create(req.body);

@@ -12,6 +12,11 @@ router.get('/:id', function(req, res) {
     articleController.getById(req, res);
 });
 
+// GET /api/v1/article/restaurant/:id
+router.get("restaurant/:id", function(req, res) {
+    articleController.getByRestaurantId(req, res);
+});
+
 // POST /api/v1/article
 router.post('/', function(req, res) {
     articleController.create(req, res);
